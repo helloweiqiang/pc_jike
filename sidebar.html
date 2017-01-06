@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>sidebar</title>
+		<style type="text/css">
+			body {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.sidebar {
+				display: flex;
+				flex-direction: column;
+				border-right: 1px solid black;
+				width: 12%;
+			}
+			
+			.sidebar span {
+				margin-bottom: 5px;
+				width: 150px;
+				height: 25px;
+				line-height: 25px;
+				text-align: center;
+			}
+			.sidebar span img{
+				margin-bottom: -12px;
+				position: relative;
+				top: -3px;
+				right: 5px;
+			}
+			
+			span:first-child::after {
+				content: "";
+				display: block;
+				width: 100%;
+				border-bottom: 1px solid darkgray;
+				margin-top: 2px;
+			}
+			
+			.sidebar span:first-child:hover {
+				background-color: white;
+				color: black;
+			}
+			
+			.sidebar span:hover {
+				background-color: dodgerblue;
+				color: white;
+			}
+			.sidebar span a{
+			text-decoration: none;
+			color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="sidebar">
+			<span><img src="images/caozuo.png"/>操作步骤</span>
+			<span><a href="#">设置集客活动</a></span>
+			<span><a href="#">扫码发送</a></span>
+			<span><a href="#">筛选发送</a></span>
+			<span><a href="#">定时发送</a></span>
+			<span><a href="#">效果分析</a></span>
+			<span><a href="#">核销处理</a></span>
+			<span><a href="#">通知设置</a></span>
+			<span><a href="#">发送记录</a></span>
+			<span><a href="#">使用记录</a></span>
+		</div>
+		<div class="main">
+
+		</div>
+	</body>
+
+</html>
