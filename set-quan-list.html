@@ -1,11 +1,209 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>设置集客活动列表</title>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link href="css/mricode.pagination.css" rel="stylesheet" />
+		<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+		<script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+		<script src="js/mricode.pagination.js"></script>
+		<!--class start-->
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.container a {
+				text-decoration: none;
+			}
+			
+			.head,
+			.head-right,
+			.foot,
+			.check {
+				display: flex;
+				flex-direction: row;
+			}
+			
+			.head {
+				align-items: center;
+				height: 40px;
+				justify-content: space-around;
+			}
+			
+			.head img {
+				width: 16px;
+			}
+			
+			.head-right input {
+				margin-right: 10px;
+			}
+			
+			.foot {
+				justify-content: center;
+			}
+			
+			.check {
+				justify-content: flex-start;
+			}
+		</style>
 	</head>
+
 	<body>
-		
+		<div class="container">
+			<div class="head">
+				<div class="">
+					<img src="images/set-quan-list/add.png" />
+					<span><a href="set-quan.html">新增集客券</a></span>
+				</div>
+				<div class="">
+					<img src="images/set-quan-list/lose.png" />
+					<span><a href="">作废列表</a></span>
+				</div>
+				<div class="">
+					<img src="images/set-quan-list/img.png" />
+					<span><a href="">集客素材库</a></span>
+					<!--历史所用的照片会存在这里，方便下次新建-->
+				</div>
+				<div class="head-right">
+					<input class="form-control" type="search" name="" id="" value="" placeholder="输入关键词搜索" /><input type="button" class="btn btn-info" style="width: 60px;" name="" id="" value="搜索" />
+				</div>
+			</div>
+			<div class="main">
+				<table border="1" cellspacing="" cellpadding="" class="table table-bordered table-hover table-striped text-center">
+					<tr>
+						<th>序号</th>
+						<th>选择</th>
+						<th>券名</th>
+						<th>有效期</th>
+						<th>可使用数量/张</th>
+						<th>可分享数量/张</th>
+						<th>金额</th>
+						<th>消费返现</th>
+						<th>限新用户</th>
+						<th>可重复领取</th>
+						<th>状态</th>
+						<th>备注</th>
+						<th>门店</th>
+						<th colspan="3">操作</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td><input type="checkbox" name="" id="" /></td>
+						<td>洗车</td>
+						<td>2017/12/12</td>
+						<td>1</td>
+						<td>5</td>
+						<td>10</td>
+						<td>5</td>
+						<td>是</td>
+						<td>否</td>
+						<td>使用中</td>
+						<td>无</td>
+						<td>自点车坊</td>
+						<td>
+							<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">编辑</button>
+							<!-- 模态框（Modal） -->
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title" id="myModalLabel">编辑优惠券</h4>
+										</div>
+										<div class="modal-body">在这里添加一些文本</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											<button type="button" class="btn btn-primary">保存</button>
+										</div>
+									</div>
+									<!-- /.modal-content -->
+								</div>
+								<!-- /.modal -->
+							</div>
+						</td>
+						<td>
+							<a href="">停用</a>
+						</td>
+						<td>
+							<a href="">作废</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><input type="checkbox" name="" id="" /></td>
+						<td>内饰精洗</td>
+						<td>2017/12/12</td>
+						<td>1</td>
+						<td>5</td>
+						<td>10</td>
+						<td>5</td>
+						<td>是</td>
+						<td>否</td>
+						<td>使用中</td>
+						<td>无</td>
+						<td>自点车坊</td>
+						<td>
+							<a href="set-quan.html">编辑</a>
+						</td>
+						<td>
+							<a href="">停用</a>
+						</td>
+						<td>
+							<a href="">作废</a>
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td><input type="checkbox" name="" id="" /></td>
+						<td>保养</td>
+						<td>2017/12/12</td>
+						<td>1</td>
+						<td>5</td>
+						<td>10</td>
+						<td>5</td>
+						<td>是</td>
+						<td>否</td>
+						<td>使用中</td>
+						<td>无</td>
+						<td>自点车坊</td>
+						<td>
+							<a href="set-quan.html">编辑</a>
+						</td>
+						<td>
+							<a href="">停用</a>
+						</td>
+						<td>
+							<a href="">作废</a>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td> <input type="checkbox" name="" id="" /></td>
+						<td colspan="14">
+							<div class="check">
+								<input class="btn btn-danger btn-xs" style="margin-right: 10px;" type="button" value="停用" />
+								<input class="btn btn-danger btn-xs" type="button" value="作废" /></td>
+						</div>
+					</tr>
+				</table>
+			</div>
+			<div class="foot">
+				<div id="page" class="m-pagination"></div>
+				<!--该分页插件AJAX用法：https://github.com/mricle/Mricode.Pagination-->
+			</div>
+		</div>
+		<script type="text/javascript">
+		</script>
+		<script type="text/javascript">
+			$("#page").pagination({
+				pageSize: 10,
+				total: 1000
+			});
+		</script>
 	</body>
+
 </html>
