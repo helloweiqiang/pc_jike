@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container a {
+	text-decoration: none;
+}
+
+.head,
+.head-right,
+.foot,
+.check {
+	display: flex;
+	flex-direction: row;
+}
+
+.head {
+	align-items: center;
+	height: 40px;
+	justify-content: space-around;
+}
+
+.head img {
+	width: 16px;
+}
+
+.head-right input {
+	margin-right: 10px;
+}
+
+.foot {
+	justify-content: center;
+}
+
+.check {
+	justify-content: flex-start;
+}
+.check input{
+	margin-right: 10px;
+}
