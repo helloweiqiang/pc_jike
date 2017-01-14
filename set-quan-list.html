@@ -13,6 +13,63 @@
 		<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
 		<script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
 		<script src="js/mricode.pagination.js"></script>
+		<style type="text/css">
+			.main {
+				display: flex;
+				flex-direction: row;
+			}
+			
+			.main-left,
+			.main-right {
+				display: flex;
+				flex-direction: column;
+				margin-right: 20px;
+			}
+			
+			.main-left span {
+				margin-bottom: 10px;
+				text-align: right;
+			}
+			
+			.main-right input {
+				margin-bottom: 3.5px;
+			}
+			
+			.checkbox {
+				display: flex;
+				flex-direction: row;
+				margin-top: 10px;
+			}
+			
+			.checkbox input {
+				margin-left: 20px;
+				margin-bottom: 7px;
+			}
+			
+			.allimg,
+			.imglist {
+				display: flex;
+			}
+			
+			.imglist {
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-content: space-around;
+				justify-content: flex-start;
+			}
+			
+			.imglist img {
+				width: 100px;
+				height: 100px;
+				margin-left: 10px;
+			}
+			
+			.imglist-children {
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -29,174 +86,303 @@
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 											<h4 class="modal-title" id="myModalLabel">新增优惠券</h4>
 										</div>
-										<div class="modal-body"></div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-											<button type="button" class="btn btn-primary">保存</button>
-										</div>
-									</div>
-									<!-- /.modal-content -->
-								</div>
-								<!-- /.modal -->
-							</div></span>
+										<div class="modal-body">
+											<div class="main">
+												<div class="main-left">
+													<span>名称:</span>
+					<span>面值:</span>
+					<span>有效期:</span>
+					<span>使用说明:</span>
+					<span>自己可用数量:</span>
+					<span>可分享数量:</span>
+					<span>可分享数量:</span>
+					<span>分享奖励:</span>
+					<span>备注</span>
+					<span>文件上传:</span>
+					<span>仅新用户领取:</span>
+					<span>可重复领取:</span>
+					<span>到期提醒:</span>
+
 				</div>
-				<div class="">
-					<img src="images/set-quan-list/lose.png" />
-					<span><a href="">作废列表</a></span>
-				</div>
-				<div class="">
-					<img src="images/set-quan-list/img.png" />
-					<span><a href="">集客素材库</a></span>
-					<!--历史所用的照片会存在这里，方便下次新建-->
-				</div>
-				<div class="head-right">
-					<input class="form-control" style="height: 30px;" type="search" name="" id="" value="" placeholder="输入关键词搜索" /><input type="button" class="btn btn-info" style="width: 60px;height: 30px;line-height: 15px;" name="" id="" value="搜索" />
+				<div class="main-right">
+					<input type="text" name="" id="" />
+					<input type="text" name="" id="" />
+					<input type="text" name="" id="" />
+					<input type="text" name="" id="" />
+					<div class="line"></div>
+					<input type="text" name="" id="" />
+					<input type="text" name="" id="" />
+					<input type="text" name="" id="" />
+					<input type="text" name="" id="" />
+					<input type="text" name="" id="" />
+					<input type="file" name="" id="" />
+					<div class="checkbox">
+						<input type="radio" name="newer" id="" />是
+						<input type="radio" name="newer" id="" />否
+
+					</div>
+					<div class="checkbox">
+						<input type="radio" name="double" id="" />是
+						<input type="radio" name="double" id="" />否
+
+					</div>
+					<div class="checkbox">
+						<input type="radio" name="date" id="" />是
+						<input type="radio" name="date" id="" />否
+
+					</div>
 				</div>
 			</div>
-			<div class="main">
-				<table border="1" cellspacing="" cellpadding="" class="table table-bordered table-hover table-striped text-center">
-					<tr>
-						<th>序号</th>
-						<th>选择</th>
-						<th>券名</th>
-						<th>有效期</th>
-						<th>可使用数量/张</th>
-						<th>可分享数量/张</th>
-						<th>金额</th>
-						<th>消费返现</th>
-						<th>限新用户</th>
-						<th>可重复领取</th>
-						<th>状态</th>
-						<th>备注</th>
-						<th>门店</th>
-						<th>操作</th>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td><input type="checkbox" name="c" id="" /></td>
-						<td>洗车</td>
-						<td>2017/12/12</td>
-						<td>1</td>
-						<td>5</td>
-						<td>10</td>
-						<td>5</td>
-						<td>是</td>
-						<td>否</td>
-						<td id="buff">使用中</td>
-						<td>无</td>
-						<td>自点车坊</td>
-						<td>
-							<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">编辑</button>
+
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			<button type="button" class="btn btn-primary">保存</button>
+		</div>
+		</div>
+		<!-- /.modal-content -->
+		</div>
+		<!-- /.modal -->
+		</div>
+		</span>
+		</div>
+		<div class="">
+			<img src="images/set-quan-list/lose.png" />
+			<span><a  data-toggle="modal" data-target="#loselist">作废列表</a>
 							<!-- 模态框（Modal） -->
-							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal fade" id="loselist" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 								<div class="modal-dialog">
 									<div class="modal-content">
 										<div class="modal-header">
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h4 class="modal-title" id="myModalLabel">编辑优惠券</h4>
+											<h4 class="modal-title" id="myModalLabel">作废列表</h4>
 										</div>
-										<div class="modal-body"></div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-											<button type="button" class="btn btn-primary">保存</button>
+										<div class="modal-body">
+											<table class="table table-bordered table-hover table-striped text-center"  cellspacing="" cellpadding="">
+												<tr><th>序号</th><th>券名</th><th>有效期</th><th>金额</th><th>消费返现</th><th>操作</th></tr>
+												<tr><td>1</td><td>洗车</td><td>2017/12/13</td><td>10</td><td>5</td><td><input class="btn btn-danger btn-xs" type="button" value="恢复" /></td></tr>
+											</table>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			<button type="button" class="btn btn-primary">保存</button>
+		</div>
+		</div>
+		<!-- /.modal-content -->
+		</div>
+		<!-- /.modal -->
+		</div>
+		</span>
+		</div>
+		<div class="">
+			<img src="images/set-quan-list/img.png" />
+			<span><a  data-toggle="modal" data-target="#allimg">集客素材库</a><!--历史所用的照片会存在这里，方便下次新建-->
+							<!-- 模态框（Modal） -->
+							<div class="modal fade" id="allimg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title" id="myModalLabel">历史素材库</h4>
 										</div>
+										<div class="modal-body">
+											<div class="allimg">
+												<div class="imglist">
+													<div class="imglist-children">
+														<img src="images/1.jpg"/>
+														<span>1.jpg</span>
+		</div>
+		<div class="imglist-children">
+			<img src="images/2.jpg" />
+			<span>2.jpg</span>
+		</div>
+		<div class="imglist-children">
+			<img src="images/3.jpg" />
+			<span>3.jpg</span>
+		</div>
+		<div class="imglist-children">
+			<img src="images/4.jpg" />
+			<span>4.jpg</span>
+		</div>
+		<div class="imglist-children">
+			<img src="images/5.jpg" />
+			<span>5.jpg</span>
+		</div>
+		<div class="imglist-children">
+			<img src="images/6.jpg" />
+			<span>6.jpg</span>
+		</div>
+		<div class="imglist-children">
+			<img src="images/7.jpg" />
+			<span>7.jpg</span>
+		</div>
+		<div class="imglist-children">
+			<img src="images/8.jpg" />
+			<span>8.jpg</span>
+		</div>
+		<div class="imglist-children">
+			<img src="images/9.jpg" />
+			<span>9.jpg</span>
+		</div>
+
+		</div>
+		</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			<button type="button" class="btn btn-primary">确定</button>
+		</div>
+		</div>
+		<!-- /.modal-content -->
+		</div>
+		<!-- /.modal -->
+		</div>
+		</span>
+		</div>
+		<div class="head-right">
+			<input class="form-control" style="height: 30px;" type="search" name="" id="" value="" placeholder="输入关键词搜索" /><input type="button" class="btn btn-info" style="width: 60px;height: 30px;line-height: 15px;" name="" id="" value="搜索" />
+		</div>
+		</div>
+		<div class="main">
+		<table class="table table-bordered table-hover table-striped" border="" cellspacing="" cellpadding="">
+				<tr>
+					<th>序号</th>
+					<th>选择</th>
+					<th>券名</th>
+					<th>有效期</th>
+					<th>可使用数量/张</th>
+					<th>可分享数量/张</th>
+					<th>金额</th>
+					<th>消费返现</th>
+					<th>限新用户</th>
+					<th>可重复领取</th>
+					<th>状态</th>
+					<th>备注</th>
+					<th>操作</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td><input type="checkbox" name="c" id="" /></td>
+					<td>洗车</td>
+					<td>2017/12/12</td>
+					<td>1</td>
+					<td>5</td>
+					<td>10</td>
+					<td>5</td>
+					<td>是</td>
+					<td>否</td>
+					<td id="buff">使用中</td>
+					<td>无</td>
+					<td>
+						<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">编辑</button>
+						<!-- 模态框（Modal） -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title" id="myModalLabel">编辑优惠券</h4>
 									</div>
-									<!-- /.modal-content -->
+									<div class="modal-body"></div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+										<button type="button" class="btn btn-primary">保存</button>
+									</div>
 								</div>
-								<!-- /.modal -->
+								<!-- /.modal-content -->
 							</div>
-						</td>
-						<!--<td>
-							<button class="btn btn-primary btn-xs" name="del">作废</button>
-						</td>-->
-					</tr>
-					<tr>
-						<td>2</td>
-						<td><input type="checkbox" name="c" id="" /></td>
-						<td>内饰精洗</td>
-						<td>2017/12/12</td>
-						<td>1</td>
-						<td>5</td>
-						<td>10</td>
-						<td>5</td>
-						<td>是</td>
-						<td>否</td>
-						<td id="buff">使用中</td>
-						<td>无</td>
-						<td>自点车坊</td>
-						<td>
-							<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">编辑</button>
-							<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h4 class="modal-title" id="myModalLabel">编辑优惠券</h4>
-										</div>
-										<div class="modal-body"></div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-											<button type="button" class="btn btn-primary">保存</button>
-										</div>
-									</div>
-								</div>
-							</div>-->
-						</td>
-						<!--<td>
-							<button class="btn btn-primary btn-xs" name="del">作废</button>
-						</td>-->
-					</tr>
-					<tr>
-						<td>3</td>
-						<td><input type="checkbox" name="c" id="" /></td>
-						<td>保养</td>
-						<td>2017/12/12</td>
-						<td>1</td>
-						<td>5</td>
-						<td>10</td>
-						<td>5</td>
-						<td>是</td>
-						<td>否</td>
-						<td id="buff">使用中</td>
-						<td>无</td>
-						<td>自点车坊</td>
-						<td>
-							<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">编辑</button>
-							<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h4 class="modal-title" id="myModalLabel">编辑优惠券</h4>
-										</div>
-										<div class="modal-body"></div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-											<button type="button" class="btn btn-primary">保存</button>
-										</div>
-									</div>
-								</div>
-							</div>-->
-						</td>
-						<!--<td>
-							<button class="btn btn-primary btn-xs" name="del">作废</button>
-						</td>-->
-					</tr>
-					<tr>
-						<td></td>
-						<td> <input type="checkbox" name="" id="checkKey" onclick="check()" /></td>
-						<td colspan="14">
-							<div class="check">
-								<input class="btn btn-danger btn-xs" type="button" id="allstop" value="停用" onclick="AllStop()" />
-								<input class="btn btn-danger btn-xs" type="button" id="alldel" value="作废" onclick="AllDel()" /></td>
+							<!-- /.modal -->
 						</div>
-					</tr>
-				</table>
-			</div>
-			<div class="foot">
-				<div id="page" class="m-pagination"></div>
-				<!--该分页插件AJAX用法：https://github.com/mricle/Mricode.Pagination-->
-			</div>
+					</td>
+					<!--<td>
+							<button class="btn btn-primary btn-xs" name="del">作废</button>
+						</td>-->
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><input type="checkbox" name="c" id="" /></td>
+					<td>内饰精洗</td>
+					<td>2017/12/12</td>
+					<td>1</td>
+					<td>5</td>
+					<td>10</td>
+					<td>5</td>
+					<td>是</td>
+					<td>否</td>
+					<td id="buff">使用中</td>
+					<td>无</td>
+					<td>
+						<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">编辑</button>
+						<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title" id="myModalLabel">编辑优惠券</h4>
+										</div>
+										<div class="modal-body"></div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											<button type="button" class="btn btn-primary">保存</button>
+										</div>
+									</div>
+								</div>
+							</div>-->
+					</td>
+					<!--<td>
+							<button class="btn btn-primary btn-xs" name="del">作废</button>
+						</td>-->
+				</tr>
+				<tr>
+					<td>3</td>
+					<td><input type="checkbox" name="c" id="" /></td>
+					<td>保养</td>
+					<td>2017/12/12</td>
+					<td>1</td>
+					<td>5</td>
+					<td>10</td>
+					<td>5</td>
+					<td>是</td>
+					<td>否</td>
+					<td id="buff">使用中</td>
+					<td>无</td>
+					<td>
+						<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">编辑</button>
+						<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title" id="myModalLabel">编辑优惠券</h4>
+										</div>
+										<div class="modal-body"></div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											<button type="button" class="btn btn-primary">保存</button>
+										</div>
+									</div>
+								</div>
+							</div>-->
+					</td>
+					<!--<td>
+							<button class="btn btn-primary btn-xs" name="del">作废</button>
+						</td>-->
+				</tr>
+				<tr>
+					<td></td>
+					<td> <input type="checkbox" name="" id="checkKey" onclick="check()" /></td>
+					<td colspan="14">
+						<div class="check">
+							<input class="btn btn-danger btn-xs" type="button" id="allstop" value="停用" onclick="AllStop()" />
+							<input class="btn btn-danger btn-xs" type="button" id="alldel" value="作废" onclick="AllDel()" /></td>
+					</div>
+				</tr>
+			</table>
+		</div>
+		<div class="foot">
+			<div id="page" class="m-pagination"></div>
+			<!--该分页插件AJAX用法：https://github.com/mricle/Mricode.Pagination-->
+		</div>
 		</div>
 		<script type="text/javascript">
 			//分页（bootstrap插件,地址：https://github.com/mricle/Mricode.Pagination)
