@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 	<head>
@@ -20,7 +20,25 @@
 			<div class="head">
 				<div class="">
 					<img src="images/set-quan-list/add.png" />
-					<span><a href="set-quan.html">新增集客券</a></span>
+					<span><a  data-toggle="modal" data-target="#myModal">新增集客券</a>
+							<!-- 模态框（Modal） -->
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title" id="myModalLabel">新增优惠券</h4>
+										</div>
+										<div class="modal-body"></div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											<button type="button" class="btn btn-primary">保存</button>
+										</div>
+									</div>
+									<!-- /.modal-content -->
+								</div>
+								<!-- /.modal -->
+							</div></span>
 				</div>
 				<div class="">
 					<img src="images/set-quan-list/lose.png" />
@@ -51,7 +69,7 @@
 						<th>状态</th>
 						<th>备注</th>
 						<th>门店</th>
-						<th colspan="3">操作</th>
+						<th>操作</th>
 					</tr>
 					<tr>
 						<td>1</td>
@@ -88,12 +106,9 @@
 								<!-- /.modal -->
 							</div>
 						</td>
-						<td>
-							<button class="btn btn-primary btn-xs">停用</button>
-						</td>
-						<td>
-							<button class="btn btn-primary btn-xs">作废</button>
-						</td>
+						<!--<td>
+							<button class="btn btn-primary btn-xs" name="del">作废</button>
+						</td>-->
 					</tr>
 					<tr>
 						<td>2</td>
@@ -127,12 +142,9 @@
 								</div>
 							</div>-->
 						</td>
-						<td>
-							<button class="btn btn-primary btn-xs">停用</button>
-						</td>
-						<td>
-							<button class="btn btn-primary btn-xs">作废</button>
-						</td>
+						<!--<td>
+							<button class="btn btn-primary btn-xs" name="del">作废</button>
+						</td>-->
 					</tr>
 					<tr>
 						<td>3</td>
@@ -166,20 +178,17 @@
 								</div>
 							</div>-->
 						</td>
-						<td>
-							<button class="btn btn-primary btn-xs">停用</button>
-						</td>
-						<td>
-							<button class="btn btn-primary btn-xs">作废</button>
-						</td>
+						<!--<td>
+							<button class="btn btn-primary btn-xs" name="del">作废</button>
+						</td>-->
 					</tr>
 					<tr>
 						<td></td>
 						<td> <input type="checkbox" name="" id="checkKey" onclick="check()" /></td>
 						<td colspan="14">
 							<div class="check">
-								<input class="btn btn-danger btn-xs" type="button" value="停用" onclick="buff()" />
-								<input class="btn btn-danger btn-xs" type="button" value="作废" /></td>
+								<input class="btn btn-danger btn-xs" type="button" id="allstop" value="停用" onclick="AllStop()" />
+								<input class="btn btn-danger btn-xs" type="button" id="alldel" value="作废" onclick="AllDel()" /></td>
 						</div>
 					</tr>
 				</table>
@@ -190,13 +199,14 @@
 			</div>
 		</div>
 		<script type="text/javascript">
+			//分页（bootstrap插件,地址：https://github.com/mricle/Mricode.Pagination)
 			$("#page").pagination({
 				pageSize: 10,
 				total: 1000
 			});
 		</script>
 		<script type="text/javascript">
-			//全选反选功能以及全选状态下的停用、作废功能
+			//全选反选
 			var inputs = document.getElementsByName('c'); //checkbox集合
 			var checkKey = document.getElementById("checkKey");
 
@@ -211,10 +221,48 @@
 					}
 				}
 			}
-			function buff(){
-				
-			}
-			//停用、作废功能
+			//全选反选之停用、作废
+			$(function() {
+				$("#allstop").click(function() {
+					var x = $(":checked");
+					var y = x.parent().parent().find("#buff");
+					var that = $("#allstop");
+					if(y.html() == "使用中" && that.val() == "停用") {
+						y.html("停用");
+						that.val("启用");
+					} else {
+						y.html("使用中")
+						that.val("停用");
+					}
+
+				})
+				$("#alldel").click(function() {
+					var x = $(":checked");
+					var y = x.parent().parent().remove();
+
+				})
+
+			})
+
+			//作废
+			//			$("button[name='del']").click(function() {
+			//					$(this).parent().parent().remove();
+			//				})
+			//使用状态的切换
+			//			$(function() {
+			//				$(".StopBtn").click(function() {
+			//					var y = $(this).html();
+			//					var x = $(this).parent().parent().find("#buff");
+			//					if(x.html() == "使用中" && y == "停用") {
+			//						var html = x.html("已停用");
+			//						$(this).html("启用")
+			//					} else if(x.html() == "已停用" && y == "启用") {
+			//						var html = x.html("使用中");
+			//						$(this).html("停用");
+			//
+			//					}
+			//				})
+			//			})
 		</script>
 	</body>
 

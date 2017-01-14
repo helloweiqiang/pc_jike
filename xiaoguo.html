@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>效果分析</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<style type="text/css">
+			.head {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 60px;
+			}
+			
+			.head input {
+				outline: none;
+			}
+			
+			.one,
+			.two,
+			.three,
+			.four {
+				width: 250px;
+				height: 150px;
+				background-color: dodgerblue;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				font-size: 18px;
+			}
+			
+			.main {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				margin-bottom: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="head">
+				<div>
+					<input class="btn btn-info btn-sm" type="button" value="今日" />
+					<input class="btn btn-info btn-sm" type="button" value="今月" />
+					<input class="btn btn-info btn-sm" type="button" value="今年" />
+					<input type="date" />
+					<span>至</span>
+					<input type="date" />
+					<input class="btn btn-info btn-sm" type="button" name="" id="" value="搜索" />
+				</div>
+
+			</div>
+			<div class="main">
+				<div class="one">
+					<span>给多少人发送</span><span>0人</span>
+				</div>
+				<div class="two">
+					<span>有多少人转发</span><span>0人</span>
+
+				</div>
+				<div class="three">
+					<span>共获得顾客资料</span><span>0人</span>
+
+				</div>
+				<div class="four">
+					<span>带动营业额</span><span>0元</span>
+
+				</div>
+			</div>
+			<div class="foot">
+				<div>
+					<table border="" cellspacing="" cellpadding="" class="table table-bordered table-hover table-striped">
+						<tr>
+							<th>集客券名称</th>
+							<th>发送人数</th>
+							<th>有多少人转发</th>
+							<th>领取人数</th>
+							<th>获得新客户数</th>
+							<th>带动营业额</th>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+</html>
