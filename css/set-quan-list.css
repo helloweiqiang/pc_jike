@@ -36,6 +36,62 @@ body {
 .check {
 	justify-content: flex-start;
 }
-.check input{
+
+.check input {
 	margin-right: 10px;
+}
+
+.main {
+	display: flex;
+	flex-direction: row;
+}
+
+.main-left,
+.main-right {
+	display: flex;
+	flex-direction: column;
+	margin-right: 20px;
+}
+
+.main-left span {
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+.main-right input {
+	margin-bottom: 3.5px;
+}
+
+.checkbox {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+}
+
+.checkbox input {
+	margin-left: 20px;
+	margin-bottom: 7px;
+}
+
+.allimg,
+.imglist {
+	display: flex;
+}
+
+.imglist {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.imglist img {
+	width: 100px;
+	height: 100px;
+	margin-left: 10px;
+}
+
+.imglist-children {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
 }

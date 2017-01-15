@@ -6,69 +6,17 @@
 		<title>设置集客活动列表</title>
 		<!--link css start-->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/fileinput.min.css" />
 		<link href="css/mricode.pagination.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="css/set-quan-list.css" />
 		<!--link css end-->
 		<!--script star-->
 		<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+		<script src="js/fileinput.min.js"></script>
 		<script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
 		<script src="js/mricode.pagination.js"></script>
 		<style type="text/css">
-			.main {
-				display: flex;
-				flex-direction: row;
-			}
-			
-			.main-left,
-			.main-right {
-				display: flex;
-				flex-direction: column;
-				margin-right: 20px;
-			}
-			
-			.main-left span {
-				margin-bottom: 10px;
-				text-align: right;
-			}
-			
-			.main-right input {
-				margin-bottom: 3.5px;
-			}
-			
-			.checkbox {
-				display: flex;
-				flex-direction: row;
-				margin-top: 10px;
-			}
-			
-			.checkbox input {
-				margin-left: 20px;
-				margin-bottom: 7px;
-			}
-			
-			.allimg,
-			.imglist {
-				display: flex;
-			}
-			
-			.imglist {
-				flex-direction: row;
-				flex-wrap: wrap;
-				align-content: space-around;
-				justify-content: flex-start;
-			}
-			
-			.imglist img {
-				width: 100px;
-				height: 100px;
-				margin-left: 10px;
-			}
-			
-			.imglist-children {
-				display: flex;
-				flex-direction: column;
-				text-align: center;
-			}
+
 		</style>
 	</head>
 
@@ -115,7 +63,7 @@
 					<input type="text" name="" id="" />
 					<input type="text" name="" id="" />
 					<input type="text" name="" id="" />
-					<input type="file" name="" id="" />
+					<input type="file" name="" id="" style="outline: none;margin-top: 5px;" />
 					<div class="checkbox">
 						<input type="radio" name="newer" id="" />是
 						<input type="radio" name="newer" id="" />否
@@ -190,39 +138,39 @@
 												<div class="imglist">
 													<div class="imglist-children">
 														<img src="images/1.jpg"/>
-														<span>1.jpg</span>
+														<span><input type="checkbox" name="" id="" />1.jpg</span>
 		</div>
 		<div class="imglist-children">
 			<img src="images/2.jpg" />
-			<span>2.jpg</span>
+			<span><input type="checkbox" name="" id="" />2.jpg</span>
 		</div>
 		<div class="imglist-children">
 			<img src="images/3.jpg" />
-			<span>3.jpg</span>
+			<span><input type="checkbox" name="" id="" />3.jpg</span>
 		</div>
 		<div class="imglist-children">
 			<img src="images/4.jpg" />
-			<span>4.jpg</span>
+			<span><input type="checkbox" name="" id="" />4.jpg</span>
 		</div>
 		<div class="imglist-children">
 			<img src="images/5.jpg" />
-			<span>5.jpg</span>
+			<span><input type="checkbox" name="" id="" />5.jpg</span>
 		</div>
 		<div class="imglist-children">
 			<img src="images/6.jpg" />
-			<span>6.jpg</span>
+			<span><input type="checkbox" name="" id="" />6.jpg</span>
 		</div>
 		<div class="imglist-children">
 			<img src="images/7.jpg" />
-			<span>7.jpg</span>
+			<span><input type="checkbox" name="" id="" />7.jpg</span>
 		</div>
 		<div class="imglist-children">
 			<img src="images/8.jpg" />
-			<span>8.jpg</span>
+			<span><input type="checkbox" name="" id="" />8.jpg</span>
 		</div>
 		<div class="imglist-children">
 			<img src="images/9.jpg" />
-			<span>9.jpg</span>
+			<span><input type="checkbox" name="" id="" />9.jpg</span>
 		</div>
 
 		</div>
@@ -240,11 +188,11 @@
 		</span>
 		</div>
 		<div class="head-right">
-			<input class="form-control" style="height: 30px;" type="search" name="" id="" value="" placeholder="输入关键词搜索" /><input type="button" class="btn btn-info" style="width: 60px;height: 30px;line-height: 15px;" name="" id="" value="搜索" />
+			<input class="form-control" style="height: 30px;" type="search" name="" id="" value="" placeholder="输入关键词搜索" /><input type="button" class="btn btn-primary" style="width: 60px;height: 30px;line-height: 15px;" name="" id="" value="搜索" />
 		</div>
 		</div>
 		<div class="main">
-		<table class="table table-bordered table-hover table-striped" border="" cellspacing="" cellpadding="">
+			<table class="table table-bordered table-hover table-striped" border="" cellspacing="" cellpadding="">
 				<tr>
 					<th>序号</th>
 					<th>选择</th>
@@ -258,7 +206,7 @@
 					<th>可重复领取</th>
 					<th>状态</th>
 					<th>备注</th>
-					<th>操作</th>
+					<th colspan="3">操作</th>
 				</tr>
 				<tr>
 					<td>1</td>
@@ -297,6 +245,10 @@
 					<!--<td>
 							<button class="btn btn-primary btn-xs" name="del">作废</button>
 						</td>-->
+					<td><button class="btn btn-primary btn-xs">生成二维码</button></td>
+					<!--点击发送跳出会员信息-->
+					<td><button class="btn btn-primary btn-xs">发送</button></td>
+
 				</tr>
 				<tr>
 					<td>2</td>
@@ -332,6 +284,9 @@
 					<!--<td>
 							<button class="btn btn-primary btn-xs" name="del">作废</button>
 						</td>-->
+					<td><button class="btn btn-primary btn-xs">生成二维码</button></td>
+					<!--点击发送跳出会员信息-->
+					<td><button class="btn btn-primary btn-xs">发送</button></td>
 				</tr>
 				<tr>
 					<td>3</td>
@@ -367,6 +322,9 @@
 					<!--<td>
 							<button class="btn btn-primary btn-xs" name="del">作废</button>
 						</td>-->
+					<td><button class="btn btn-primary btn-xs">生成二维码</button></td>
+					<!--点击发送跳出会员信息-->
+					<td><button class="btn btn-primary btn-xs">发送</button></td>
 				</tr>
 				<tr>
 					<td></td>
